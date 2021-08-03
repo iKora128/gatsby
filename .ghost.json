@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://ikora.ghost.io",
+    "contentApiKey": "ddae9128665f9119b7d511863e"
+  },
+  "production": {
+    "apiUrl": "https://ikora.ghost.io",
+    "contentApiKey": "ddae9128665f9119b7d511863e"
+  }
+}
