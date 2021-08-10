@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "http://128.199.224.21",
+    "apiUrl": "http://longisland3.net",
     "contentApiKey": "59bd180c95cd33058b1b3c8c92"
   },
   "production": {
-    "apiUrl": "http://128.199.224.21",
+    "apiUrl": "http://longisland3.net",
     "contentApiKey": "59bd180c95cd33058b1b3c8c92"
   }
 }
