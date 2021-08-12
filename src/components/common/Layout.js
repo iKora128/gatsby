@@ -32,15 +32,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <body className={bodyClass} />
             </Helmet>
 
-            <div
-                style={{
-                    backgroundColor: 'var(--bg)',
-                    color: 'var(--textNormal)',
-                    transition: 'color 0.2s ease-out, background 0.2s ease-out',
-                }}
-            > 
-            </div>
-
             <div className="viewport">
 
                 <div className="viewport-top">
@@ -65,6 +56,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             <label>
                                                 <input
                                                     type="checkbox"
+                                                    className="check-darkmode"
                                                     onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
                                                     checked={theme === 'dark'}
                                                 />{' '}
@@ -113,6 +105,15 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     </footer>
 
                 </div>
+            </div>
+
+            <div
+                style={{
+                    backgroundColor: 'var(--bg)',
+                    color: 'var(--textNormal)',
+                    transition: 'color 0.2s ease-out, background 0.2s ease-out',
+                }}
+            > 
             </div>
 
         </>
