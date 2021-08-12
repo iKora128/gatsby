@@ -5,6 +5,7 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import { Navigation } from '.'
+import{ ThemeToggler } from 'gatsby-plugin-dark-mode'
 import config from '../../utils/siteConfig'
 
 // Styles
@@ -31,6 +32,16 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <body className={bodyClass} />
             </Helmet>
 
+            <div
+                style={{
+                    backgroundColor: 'var(--bg)',
+                    color: 'var(--textNormal)',
+                    transition: 'color 0.2s ease-out, background 0.2s ease-out',
+                }}
+            >
+                 ...
+            </div>
+
             <div className="viewport">
 
                 <div className="viewport-top">
@@ -50,6 +61,18 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
                                     { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
                                     <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
+                                    <ThemeToggler>
+                                        {({ theme, toggleTheme }) => (
+                                            <label>
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                                                    checked={theme === 'dark'}
+                                                />{' '}
+                                                 Dark mode
+                                            </label>
+                                        )}
+                                    </ThemeToggler>
                                 </div>
                             </div>
                             { isHome ?
