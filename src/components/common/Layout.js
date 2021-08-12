@@ -31,9 +31,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
                 <body className={bodyClass} />
             </Helmet>
-
-            <div className="viewport">
-
+            <div
+                style={{
+                    backgroundColor: 'var(--bg)',
+                    color: 'var(--textNormal)',
+                    transition: 'color 0.2s ease-out, background 0.2s ease-out',
+                }}
+            > 
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
                     <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
@@ -105,17 +109,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     </footer>
 
                 </div>
-            </div>
 
-            <div
-                style={{
-                    backgroundColor: 'var(--bg)',
-                    color: 'var(--textNormal)',
-                    transition: 'color 0.2s ease-out, background 0.2s ease-out',
-                }}
-            > 
             </div>
-
         </>
     )
 }
