@@ -5,7 +5,7 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import { Navigation } from '.'
-import{ ThemeToggler } from 'gatsby-plugin-dark-mode'
+import　{ ThemeToggler } from 'gatsby-plugin-dark-mode'
 import config from '../../utils/siteConfig'
 
 // Styles
@@ -38,8 +38,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     color: 'var(--textNormal)',
                     transition: 'color 0.2s ease-out, background 0.2s ease-out',
                 }}
-            >
-                 ...
+            > 
             </div>
 
             <div className="viewport">
