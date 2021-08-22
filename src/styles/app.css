@@ -324,13 +324,13 @@ body {
     font-style: normal;
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
-    background: #fff;
+    background: #F4F5F7;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
 
-    --bg: white;
+    --bg:　#F4F5F7;
     --textNormal: #222;
     --textTitle: #222;
     --textLink: blue;
@@ -344,7 +344,7 @@ body.dark {
   
     --bg: #15171a;
     --textNormal: rgba(255, 255, 255, 0.88);
-    --textTitle: white;
+    --textTitle: #F4F5F7;
     --textLink: yellow;
     --hr: hsla(0, 0%, 100%, 0.2);
   }
