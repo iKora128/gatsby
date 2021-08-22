@@ -330,23 +330,21 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
 
-    --bg:　#F4F5F7;
-    --textNormal: #222;
-    --textTitle: #222;
-    --textLink: blue;
-    --hr: hsla(0, 0%, 0%, 0.2);
-
-    background-color: var(--bg);
-}
-
-body.dark {
-    -webkit-font-smoothing: antialiased;
-  
     --bg: #15171a;
     --textNormal: rgba(255, 255, 255, 0.88);
     --textTitle: #F4F5F7;
     --textLink: yellow;
     --hr: hsla(0, 0%, 100%, 0.2);
+    background-color: var(--bg);
+}
+
+body.dark {
+    -webkit-font-smoothing: antialiased;
+    --bg:　#F4F5F7;
+    --textNormal: #222;
+    --textTitle: #222;
+    --textLink: blue;
+    --hr: hsla(0, 0%, 0%, 0.2);
   }
 
 ::selection {
