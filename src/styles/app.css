@@ -1098,7 +1098,7 @@ h6 {
 .kg-bookmark-container {
     display: flex;
     min-height: 148px;
-    color: var(--color-base);
+    color: var(--textTitle);
     font-family: var(--font-sans-serif);
     text-decoration: none;
     border-radius: 3px;
