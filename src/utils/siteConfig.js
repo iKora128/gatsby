@@ -3,8 +3,8 @@ module.exports = {
 
     postsPerPage: 12, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)
 
-    siteTitleMeta: `Ghost Gatsby Starter`, // This allows an alternative site title for meta data for pages.
-    siteDescriptionMeta: `A starter template to build amazing static websites with Ghost and Gatsby`, // This allows an alternative site description for meta data for pages.
+    siteTitleMeta: `longisland3`, // This allows an alternative site title for meta data for pages.
+    siteDescriptionMeta: `粒の振る舞い, 自己増殖, そしてつながりと感情`, // This allows an alternative site description for meta data for pages.
 
     shareImageWidth: 1000, // Change to the width of your default share image
     shareImageHeight: 523, // Change to the height of your default share image
