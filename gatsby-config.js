@@ -188,6 +188,6 @@ module.exports = {
         `gatsby-plugin-force-trailing-slashes`,
         `gatsby-plugin-offline`,
         `gatsby-plugin-dark-mode`,
-        "gatsby-plugin-netlify"
+        `gatsby-plugin-netlify`,
     ],
 }
