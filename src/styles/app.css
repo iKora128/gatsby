@@ -132,6 +132,16 @@ video {
     font-size: 100%;
     vertical-align: baseline;
 }
+<<<<<<< HEAD
+=======
+
+/* this is my originally style */
+img{
+    height: auto;
+}
+/* my originally style */
+
+>>>>>>> origin/master
 body {
     line-height: 1;
 }
@@ -317,18 +327,97 @@ body {
     font-style: normal;
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
+<<<<<<< HEAD
     background: #fff;
+=======
+    background: #15171a;
+>>>>>>> origin/master
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
+<<<<<<< HEAD
 }
 
+=======
+
+    --bg: #15171a;
+    --textNormal: rgba(255, 255, 255, 0.88);
+    --textTitle: #F4F5F7;
+    --textLink: yellow;
+    --hr: hsla(0, 0%, 100%, 0.2);
+    background-color: var(--bg);
+}
+
+body.dark {
+    -webkit-font-smoothing: antialiased;
+    --bg:　#F4F5F7;
+    --textNormal: #222;
+    --textTitle: #222;
+    --textLink: blue;
+    --hr: hsla(0, 0%, 0%, 0.2);
+  }
+
+>>>>>>> origin/master
 ::selection {
     text-shadow: none;
     background: #cbeafb;
 }
 
+<<<<<<< HEAD
+=======
+/* dark button styles */
+dark-button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3px;
+  }
+  .dark-button:before, .dark-button:after {
+    box-sizing: border-box;
+  }
+  .dark-button label {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 25px;
+    border-radius: 100px;
+    background-color: #252525;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .dark-button label:before, .dark-button label:after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: 0.4s ease;
+  }
+  .dark-button label:before {
+    background-color: #f16e65;
+  }
+  .dark-button label:after {
+    background-color: #252525;
+    left: -58px;
+    transform: scale(0.00001);
+  }
+  .dark-button input[type=checkbox] {
+    display: none;
+  }
+  .dark-button input[type=checkbox]:checked + label:before {
+    background-color: #01dbc6;
+    transform: translateX(20px);
+  }
+  .dark-button input[type=checkbox]:checked + label:after {
+    transform: translateX(75px) scale(1);
+  }
+
+>>>>>>> origin/master
 hr {
     position: relative;
     display: block;
@@ -349,6 +438,14 @@ video {
     vertical-align: middle;
 }
 
+<<<<<<< HEAD
+=======
+.kg-card iframe{
+    width: 100%;
+    height: 30vh;
+}
+
+>>>>>>> origin/master
 fieldset {
     margin: 0;
     padding: 0;
@@ -458,7 +555,10 @@ h4,
 h5,
 h6 {
     margin-top: 0;
+<<<<<<< HEAD
     color: var(--color-base);
+=======
+>>>>>>> origin/master
     line-height: 1.15;
     font-weight: 700;
     text-rendering: optimizeLegibility;
@@ -545,7 +645,10 @@ h6 {
 .post-full-content {
     max-width: 720px;
     margin: 0 auto;
+<<<<<<< HEAD
     background: #fff;
+=======
+>>>>>>> origin/master
 }
 
 .post-feature-image img {
@@ -1026,7 +1129,11 @@ h6 {
 .kg-bookmark-container {
     display: flex;
     min-height: 148px;
+<<<<<<< HEAD
     color: var(--color-base);
+=======
+    color: var(--textTitle);
+>>>>>>> origin/master
     font-family: var(--font-sans-serif);
     text-decoration: none;
     border-radius: 3px;

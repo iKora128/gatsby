@@ -1,10 +1,19 @@
 {
   "development": {
+<<<<<<< HEAD
     "apiUrl": "https://ikora.ghost.io",
     "contentApiKey": "ddae9128665f9119b7d511863e"
   },
   "production": {
     "apiUrl": "https://ikora.ghost.io",
     "contentApiKey": "ddae9128665f9119b7d511863e"
+=======
+    "apiUrl": "https://longisland3.net",
+    "contentApiKey": "59bd180c95cd33058b1b3c8c92"
+  },
+  "production": {
+    "apiUrl": "https://longisland3.net",
+    "contentApiKey": "59bd180c95cd33058b1b3c8c92"
+>>>>>>> origin/master
   }
 }

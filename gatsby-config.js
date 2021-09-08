@@ -22,7 +22,11 @@ try {
     }
 }
 
+<<<<<<< HEAD
 if (process.env.NODE_ENV === `production` && config.siteUrl === `http://localhost:8000` && !process.env.SITEURL) {
+=======
+if (process.env.NODE_ENV === `production` && config.siteUrl === `https://longisland3.com` && !process.env.SITEURL) {
+>>>>>>> origin/master
     throw new Error(`siteUrl can't be localhost and needs to be configured in siteConfig. Check the README.`) // eslint-disable-line
 }
 
@@ -187,5 +191,10 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-force-trailing-slashes`,
         `gatsby-plugin-offline`,
+<<<<<<< HEAD
+=======
+        `gatsby-plugin-dark-mode`,
+        "gatsby-plugin-netlify",
+>>>>>>> origin/master
     ],
 }
