@@ -5,10 +5,7 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import { Navigation } from '.'
-<<<<<<< HEAD
-=======
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
->>>>>>> origin/master
 import config from '../../utils/siteConfig'
 
 // Styles
@@ -34,11 +31,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
                 <body className={bodyClass} />
             </Helmet>
-<<<<<<< HEAD
-
-            <div className="viewport">
-
-=======
             
             {/* this styles dark-theme */}
             <div
@@ -48,7 +40,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     transition: `color 0.2s ease-out, background 0.2s ease-out`,
                 }}
             > 
->>>>>>> origin/master
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
                     <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
@@ -66,8 +57,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
                                     { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
                                     <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
-<<<<<<< HEAD
-=======
                                     
                                     {/* darkmode toggle */}
                                     <ThemeToggler>
@@ -85,7 +74,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         )}
                                     </ThemeToggler>
 
->>>>>>> origin/master
                                 </div>
                             </div>
                             { isHome ?
@@ -118,11 +106,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <footer className="site-foot">
                         <div className="site-foot-nav container">
                             <div className="site-foot-nav-left">
-<<<<<<< HEAD
-                                <Link to="/">{site.title}</Link> © 2021 &mdash; Published with <a className="site-foot-nav-item" href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a>
-=======
                                 <Link to="/">{site.title}</Link> © 2021  
->>>>>>> origin/master
                             </div>
                             <div className="site-foot-nav-right">
                                 <Navigation data={site.navigation} navClass="site-foot-nav-item" />
@@ -131,13 +115,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     </footer>
 
                 </div>
-<<<<<<< HEAD
-            </div>
-
-=======
 
             </div>
->>>>>>> origin/master
         </>
     )
 }
