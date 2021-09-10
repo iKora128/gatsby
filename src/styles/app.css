@@ -137,6 +137,10 @@ video {
 img{
     height: auto;
 }
+
+figcaption{
+    font-size: 12px;
+}
 /* my originally style */
 
 body {
