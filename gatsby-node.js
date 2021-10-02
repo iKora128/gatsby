@@ -81,10 +81,10 @@ exports.createPages = async ({ graphql, actions }) => {
             items: items,
             itemsPerPage: postsPerPage,
             component: tagsTemplate,
-            pathPrefix: ({ pageNumber }) => (pageNumber === 0) ? url : `${url}/page`,
+            pathPrefix: ({ pageNumber }) => ((pageNumber === 0) ? url : `${url}/page`),
             context: {
-                slug: node.slug
-            }
+                slug: node.slug,
+            },
         })
     })
 
