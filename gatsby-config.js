@@ -42,6 +42,12 @@ module.exports = {
          *  Content Plugins
          */
         {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+              trackingIds: [process.env.GATSBY_TRACKING_ID],
+            },
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: path.join(__dirname, `src`, `pages`),
