@@ -50,11 +50,11 @@ const WebsiteMeta = ({ data, settings, canonical, title, description, image, typ
     return (
         <>
             <Helmet>
-            <!-- Global site tag (gtag.js) - Google Analytics -->
+                <!-- Global site tag (gtag.js) - Google Analytics -->
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN2MN3GY81"></script>
                 <script>
                     window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);{'}'}
+                    function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
 
                     gtag('config', 'G-CN2MN3GY81');
