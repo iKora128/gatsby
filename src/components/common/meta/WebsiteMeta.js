@@ -50,6 +50,15 @@ const WebsiteMeta = ({ data, settings, canonical, title, description, image, typ
     return (
         <>
             <Helmet>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN2MN3GY81"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);{'}'}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-CN2MN3GY81');
+                </script>
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <link rel="canonical" href={canonical} />
@@ -61,6 +70,8 @@ const WebsiteMeta = ({ data, settings, canonical, title, description, image, typ
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
                 <meta name="twitter:url" content={canonical} />
+                
+                
                 {settings.twitter && <meta name="twitter:site" content={`https://twitter.com/${settings.twitter.replace(/^@/, ``)}/`} />}
                 {settings.twitter && <meta name="twitter:creator" content={settings.twitter} />}
                 <script type="application/ld+json">{JSON.stringify(jsonLd, undefined, 4)}</script>
