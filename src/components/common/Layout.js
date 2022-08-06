@@ -126,7 +126,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                                     onChange={(e) =>
                                                         toggleTheme(e.target.checked ? 'dark' : 'light')
                                                     }
-                                                    checked={theme === 'dark'}
+                                                    checked={theme === 'light'}
                                                 />{' '}
                                             </label>
                                         )
