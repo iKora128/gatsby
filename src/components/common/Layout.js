@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { ThemeToggler} from "gatsby-plugin-dark-mode";
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
@@ -17,7 +18,7 @@ import "../../styles/app.css";
  * styles, and meta data for each page.
  *
  */
- const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
+const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node;
     const twitterUrl = site.twitter
         ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
@@ -26,22 +27,21 @@ import "../../styles/app.css";
         ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
         : null;
 
-
-        return <>
+    return <>
         <Helmet>
             <html lang={site.lang} />
             <style type="text/css">{`${site.codeinjection_styles}`}</style>
             <body className={bodyClass} />
         </Helmet>
-
-        <div
+        
+        <div>
                 style={{
                     backgroundColor: `var(--bg)`,
                     color: `var(--textNormal)`,
                     transition: `color 0.2s ease-out, background 0.2s ease-out`,
                 }}
-            > 
-
+        </div>
+        
         <div className="viewport">
             <div className="viewport-top">
                 {/* The main header section on top of the screen */}
@@ -53,7 +53,7 @@ import "../../styles/app.css";
                         }),
                     }}
                 >
-                   <div className="container">
+                    <div className="container">
                         <div className="site-mast">
                             <div className="site-mast-left">
                                 <Link to="/">
@@ -68,7 +68,6 @@ import "../../styles/app.css";
                                     )}
                                 </Link>
                             </div>
-
                             <div className="site-mast-right">
                                 {site.twitter && (
                                     <a
@@ -98,7 +97,7 @@ import "../../styles/app.css";
                                         />
                                     </a>
                                 )}
-                               <a
+                                <a
                                     className="site-nav-item"
                                     href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
                                     target="_blank"
@@ -111,20 +110,20 @@ import "../../styles/app.css";
                                     />
                                 </a>
 
-                                  {/* darkmode toggle */}
-                                  <ThemeToggler>
-                                        {({ theme, toggleTheme }) => (
-                                            <div className="dark-button">
-                                                <input
-                                                    type="checkbox"
-                                                    id="toggle"
-                                                    onChange={e => toggleTheme(e.target.checked ? `light` : `dark`)
-                                                    }
-                                                    checked={theme === `light`}
-                                                />
-                                                <label htmlFor="toggle"></label>
-                                            </div>
-                                        )}
+                                {/* darkmode toggle */}
+                                    <ThemeToggler>
+                                    {({ theme, toggleTheme }) => (
+                                        <div className="dark-button">
+                                            <input
+                                                type="checkbox"
+                                                id="toggle"
+                                                onChange={e => toggleTheme(e.target.checked ? `light` : `dark`)
+                                                }
+                                                checked={theme === `light`}
+                                            />
+                                            <label htmlFor="toggle"></label>
+                                        </div>
+                                    )}
                                     </ThemeToggler>
                             </div>
                         </div>
@@ -191,10 +190,9 @@ import "../../styles/app.css";
             </div>
         </div>
     </>;
-    
-    };
+};
 
-    DefaultLayout.propTypes = {
+DefaultLayout.propTypes = {
     children: PropTypes.node.isRequired,
     bodyClass: PropTypes.string,
     isHome: PropTypes.bool,
