@@ -18,16 +18,6 @@ const Index = ({ data, location, pageContext }) => {
 
     return (
         <>
-
-　　　　<div
-        style={{
-          backgroundColor: 'var(--bg)',
-          color: 'var(--textNormal)',
-          transition: 'color 0.2s ease-out, background 0.2s ease-out',
-        }}
-        >
-        </div>
-        
             <MetaData location={location} />
             <Layout isHome={true}>
                 <div className="container">
