@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
 
