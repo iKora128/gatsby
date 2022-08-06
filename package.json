@@ -45,13 +45,10 @@
     "gatsby-awesome-pagination": "0.3.8",
     "gatsby-plugin-advanced-sitemap": "2.1.0",
     "gatsby-plugin-catch-links": "4.15.0",
-    "gatsby-plugin-dark-mode": "1.1.2",
+    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "4.15.1",
-    "gatsby-plugin-force-trailing-slashes": "1.0.5",
-    "gatsby-plugin-google-gtag": "^4.3.0",
     "gatsby-plugin-image": "2.15.1",
     "gatsby-plugin-manifest": "4.15.1",
-    "gatsby-plugin-netlify": "3.13.0",
     "gatsby-plugin-offline": "5.15.1",
     "gatsby-plugin-react-helmet": "5.15.0",
     "gatsby-plugin-sharp": "4.15.1",
@@ -59,10 +56,9 @@
     "gatsby-source-ghost": "5.0.0",
     "gatsby-transformer-sharp": "4.15.1",
     "lodash": "4.17.21",
-    "react": "16",
+    "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
-    "trim": "^1.0.1",
     "url": "0.11.0"
   }
 }

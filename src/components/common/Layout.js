@@ -2,8 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-
+import { ThemeToggler} from "gatsby-plugin-dark-mode";
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
 
@@ -18,7 +17,7 @@ import "../../styles/app.css";
  * styles, and meta data for each page.
  *
  */
-const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
+ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node;
     const twitterUrl = site.twitter
         ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
@@ -27,7 +26,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
         ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
         : null;
 
-    return <>
+
+        return <>
         <Helmet>
             <html lang={site.lang} />
             <style type="text/css">{`${site.codeinjection_styles}`}</style>
@@ -53,7 +53,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         }),
                     }}
                 >
-                    <div className="container">
+                   <div className="container">
                         <div className="site-mast">
                             <div className="site-mast-left">
                                 <Link to="/">
@@ -68,6 +68,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     )}
                                 </Link>
                             </div>
+
                             <div className="site-mast-right">
                                 {site.twitter && (
                                     <a
@@ -97,7 +98,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         />
                                     </a>
                                 )}
-                                <a
+                               <a
                                     className="site-nav-item"
                                     href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
                                     target="_blank"
@@ -125,7 +126,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             </div>
                                         )}
                                     </ThemeToggler>
-
                             </div>
                         </div>
                         {isHome ? (
@@ -191,9 +191,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             </div>
         </div>
     </>;
-};
+    
+    };
 
-DefaultLayout.propTypes = {
+    DefaultLayout.propTypes = {
     children: PropTypes.node.isRequired,
     bodyClass: PropTypes.string,
     isHome: PropTypes.bool,
