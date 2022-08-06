@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { ThemeToggler } from "gatsby-plugin-dark-mode";
+
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
 
@@ -27,12 +27,20 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
         ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
         : null;
 
-        return <>
+    return <>
         <Helmet>
             <html lang={site.lang} />
             <style type="text/css">{`${site.codeinjection_styles}`}</style>
             <body className={bodyClass} />
         </Helmet>
+
+        <div
+                style={{
+                    backgroundColor: `var(--bg)`,
+                    color: `var(--textNormal)`,
+                    transition: `color 0.2s ease-out, background 0.2s ease-out`,
+                }}
+            > 
 
         <div className="viewport">
             <div className="viewport-top">
@@ -101,9 +109,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         alt="RSS Feed"
                                     />
                                 </a>
-                                
-                                    {/* darkmode toggle */}
-                                    <ThemeToggler>
+
+                                  {/* darkmode toggle */}
+                                  <ThemeToggler>
                                         {({ theme, toggleTheme }) => (
                                             <div className="dark-button">
                                                 <input
@@ -118,8 +126,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         )}
                                     </ThemeToggler>
 
-                                </div>
                             </div>
+                        </div>
                         {isHome ? (
                             <div className="site-banner">
                                 <h1 className="site-banner-title">
