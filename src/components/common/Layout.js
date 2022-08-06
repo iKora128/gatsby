@@ -41,6 +41,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
           transition: 'color 0.2s ease-out, background 0.2s ease-out',
         }}
       >
+
       </div>
 
         <div className="viewport">
@@ -120,7 +121,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                                 id="toggle"
                                                 onChange={e => toggleTheme(e.target.checked ? `light` : `dark`)
                                                 }
-                                                checked={theme === `light`}
+                                                checked={theme === `dark`}
                                             />
                                             <label htmlFor="toggle"></label>
                                         </div>
@@ -128,6 +129,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     </ThemeToggler>
                             </div>
                         </div>
+                        
                         {isHome ? (
                             <div className="site-banner">
                                 <h1 className="site-banner-title">
