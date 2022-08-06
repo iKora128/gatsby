@@ -33,33 +33,75 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             <style type="text/css">{`${site.codeinjection_styles}`}</style>
             <body className={bodyClass} />
         </Helmet>
-            
-            {/* this styles dark-theme */}
-            <div
-                style={{
-                    backgroundColor: `var(--bg)`,
-                    color: `var(--textNormal)`,
-                    transition: `color 0.2s ease-out, background 0.2s ease-out`,
-                }}
-            > 
-                <div className="viewport-top">
-                    {/* The main header section on top of the screen */}
-                    <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
-                        <div className="container">
-                            <div className="site-mast">
-                                <div className="site-mast-left">
-                                    <Link to="/">
-                                        {site.logo ?
-                                            <img className="site-logo" src={site.logo} alt={site.title} />
-                                            : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
-                                        }
-                                    </Link>
-                                </div>
-                                <div className="site-mast-right">
-                                    { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
-                                    { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
-                                    <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
-                                    
+
+        <div className="viewport">
+            <div className="viewport-top">
+                {/* The main header section on top of the screen */}
+                <header
+                    className="site-head"
+                    style={{
+                        ...(site.cover_image && {
+                            backgroundImage: `url(${site.cover_image})`,
+                        }),
+                    }}
+                >
+                    <div className="container">
+                        <div className="site-mast">
+                            <div className="site-mast-left">
+                                <Link to="/">
+                                    {site.logo ? (
+                                        <img
+                                            className="site-logo"
+                                            src={site.logo}
+                                            alt={site.title}
+                                        />
+                                    ) : (
+                                        <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={site.title} />
+                                    )}
+                                </Link>
+                            </div>
+                            <div className="site-mast-right">
+                                {site.twitter && (
+                                    <a
+                                        href={twitterUrl}
+                                        className="site-nav-item"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            className="site-nav-icon"
+                                            src="/images/icons/twitter.svg"
+                                            alt="Twitter"
+                                        />
+                                    </a>
+                                )}
+                                {site.facebook && (
+                                    <a
+                                        href={facebookUrl}
+                                        className="site-nav-item"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            className="site-nav-icon"
+                                            src="/images/icons/facebook.svg"
+                                            alt="Facebook"
+                                        />
+                                    </a>
+                                )}
+                                <a
+                                    className="site-nav-item"
+                                    href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        className="site-nav-icon"
+                                        src="/images/icons/rss.svg"
+                                        alt="RSS Feed"
+                                    />
+                                </a>
+                                
                                     {/* darkmode toggle */}
                                     <ThemeToggler>
                                         {({ theme, toggleTheme }) => (
