@@ -111,27 +111,21 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     />
                                 </a>
 
-                                <ThemeToggler>
-                                    {({ theme, toggleTheme }) => {
-                                        // Don't render anything at compile time. Deferring rendering until we
-                                        // know which theme to use on the client avoids incorrect initial
-                                        // state being displayed.
-                                        if (theme == null) {
-                                            return null
-                                        }
-                                        return (
-                                            <label>
+                              {/* darkmode toggle */}
+                              <ThemeToggler>
+                                        {({ theme, toggleTheme }) => (
+                                            <div className="dark-button">
                                                 <input
                                                     type="checkbox"
-                                                    onChange={(e) =>
-                                                        toggleTheme(e.target.checked ? 'dark' : 'light')
+                                                    id="toggle"
+                                                    onChange={e => toggleTheme(e.target.checked ? `light` : `dark`)
                                                     }
-                                                    checked={theme === 'light'}
-                                                />{' '}
-                                            </label>
-                                        )
-                                    }}
-                                </ThemeToggler>
+                                                    checked={theme === `light`}
+                                                />
+                                                <label htmlFor="toggle"></label>
+                                            </div>
+                                        )}
+                                    </ThemeToggler>
                             </div>
                         </div>
                         {isHome ? (
