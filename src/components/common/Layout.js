@@ -34,14 +34,14 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             <body className={bodyClass} />
         </Helmet>
 
-          {/* this styles dark-theme */}
-          <div
-                style={{
-                    backgroundColor: `var(--bg)`,
-                    color: `var(--textNormal)`,
-                    transition: `color 0.2s ease-out, background 0.2s ease-out`,
-                }}
-            > </div>
+        {/* this styles dark-theme */}
+        <div
+            style={{
+                backgroundColor: `var(--bg)`,
+                color: `var(--textNormal)`,
+                transition: `color 0.2s ease-out, background 0.2s ease-out`,
+            }}
+        > </div>
 
         <div className="viewport">
             <div className="viewport-top">
@@ -112,19 +112,26 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 </a>
 
                                 <ThemeToggler>
-                                        {({ theme, toggleTheme }) => (
-                                            <div className="dark-button">
+                                    {({ theme, toggleTheme }) => {
+                                        // Don't render anything at compile time. Deferring rendering until we
+                                        // know which theme to use on the client avoids incorrect initial
+                                        // state being displayed.
+                                        if (theme == null) {
+                                            return null
+                                        }
+                                        return (
+                                            <label>
                                                 <input
                                                     type="checkbox"
-                                                    id="toggle"
-                                                    onChange={e => toggleTheme(e.target.checked ? `light` : `dark`)
+                                                    onChange={(e) =>
+                                                        toggleTheme(e.target.checked ? 'dark' : 'light')
                                                     }
-                                                    checked={theme === `light`}
-                                                />
-                                                <label htmlFor="toggle"></label>
-                                            </div>
-                                        )}
-                                    </ThemeToggler>
+                                                    checked={theme === 'dark'}
+                                                />{' '}
+                                            </label>
+                                        )
+                                    }}
+                                </ThemeToggler>
                             </div>
                         </div>
                         {isHome ? (
