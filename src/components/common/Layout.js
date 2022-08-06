@@ -41,7 +41,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     color: `var(--textNormal)`,
                     transition: `color 0.2s ease-out, background 0.2s ease-out`,
                 }}
-            >
+            > </div>
 
         <div className="viewport">
             <div className="viewport-top">
