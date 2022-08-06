@@ -37,9 +37,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
         {/* this styles dark-theme */}
         <div
             style={{
-                backgroundColor: `var(--bg)`,
-                color: `var(--textNormal)`,
-                transition: `color 0.2s ease-out, background 0.2s ease-out`,
+                backgroundColor: "var(--bg)",
+                color: "var(--textNormal)",
+                transition: "color 0.2s ease-out, background 0.2s ease-out"
             }}
         > </div>
 
