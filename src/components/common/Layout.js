@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Navigation } from '.'
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import config from '../../utils/siteConfig'
@@ -34,11 +34,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             {/* this styles dark-theme */}
             <div
                 style={{
-                    backgroundColor: `var(--bg)`,
-                    color: `var(--textNormal)`,
-                    transition: `color 0.2s ease-out, background 0.2s ease-out`,
-                }}
-            > 
+                backgroundColor: 'var(--bg)',
+                color: 'var(--textNormal)',
+                transition: 'color 0.2s ease-out, background 0.2s ease-out',
+                        }}
+            >
+        ...
+        </div>
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
                     <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
@@ -66,7 +68,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                                     id="toggle"
                                                     onChange={e => toggleTheme(e.target.checked ? `light` : `dark`)
                                                     }
-                                                    checked={theme === `light`}
+                                                    checked={theme === `dark`}
                                                 />
                                                 <label htmlFor="toggle"></label>
                                             </div>
