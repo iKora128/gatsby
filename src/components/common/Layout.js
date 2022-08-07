@@ -170,14 +170,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <div className="site-foot-nav container">
                         <div className="site-foot-nav-left">
                             <Link to="/">{site.title}</Link> © 2022
-                            <a
-                                className="site-foot-nav-item"
-                                href="https://ghost.org"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Ghost
-                            </a>
                         </div>
                         <div className="site-foot-nav-right">
                             <Navigation
